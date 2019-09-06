@@ -78,37 +78,29 @@ class Group extends CI_Model {
 
     /* 모임 리스트 */
     public function list_search($argu) {
-    	$this->db->where('user_idx', $argu['user_idx']);
-        $this->db->select("*");
-        $this->db->from("measure");
-        $this->db->order_by("idx", "desc");
-        $result = $this->db->get();
+    	$query = "select idx, name, master_idx, price, photo_url from groups where idx in (select groups_idx from user_groups where user_idx=".$argu['user_idx'].")";
+
+    	$result = $this->db->query($query);
+
         $data = [];
         if($result->num_rows()) {
         	foreach( $result->result() as $row )
 	        {
-	        	$temp = array(
-	        		'idx' => $row->idx,
-	        		'hb' => $row->hb,
-	        		'period' => $row->period,
-	        		'date' => $row->date
-	        	);
-	        	array_push($data, $temp);
-	        }
+		        array_push($data, $row);
+	        }	 
+
 	        return array(
 				'status' => API_SUCCESS, 
 				'message' => 'Success',
-				'data' => $data,
-				'dataNum' => $result->num_rows()
+				'data' => $data
 			);
         } else {
         	return array(
-				'status' => 204, 
-				'message' => '측정결과가 존재하지 않습니다.',
-				'data' => $data
-			);
+	          'status' => API_FAILURE, 
+	          'message' => 'Fail',
+	          'data' => null
+	        );
         }
-        
     }
 
 
