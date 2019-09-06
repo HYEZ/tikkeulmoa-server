@@ -815,4 +815,15 @@
 2019/9/6 15:16:24 : [models/Detail/insert] ENTER
 2019/9/6 15:16:24 : [models/Detail/insert] EXIT
 2019/9/6 15:16:24 : [/api/deposit] EXIT
+2019/9/6 15:54:56 : [/api/groups] ENTER
+2019/9/6 15:55:9 : [/api/groups] ENTER
+2019/9/6 15:55:44 : [/api/groups] ENTER
+2019/9/6 15:56:3 : [/api/groups] ENTER
+2019/9/6 15:56:9 : [/api/groups] ENTER
+2019/9/6 15:56:9 : [/api/groups] EXIT
+2019/9/6 15:56:32 : [/api/groups] ENTER
+2019/9/6 15:56:32 : [/api/groups] EXIT
+2019/9/6 15:56:36 : [/api/groups] ENTER
+2019/9/6 15:57:35 : [/api/groups] ENTER
+2019/9/6 15:57:35 : [/api/groups] EXIT
 

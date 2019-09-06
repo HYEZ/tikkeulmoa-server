@@ -77,16 +77,16 @@ class Group extends CI_Model {
     }
 
     /* 커뮤니티 유무 */
-   	public function exist_community($argu) {
-		$query = "select * from community where groups_idx=".$argu['groups_idx']."";
+   	public function exist_community($idx) {
+		$query = "select * from community where groups_idx=".$idx."";
 
 		$result = $this->db->query($query);
-
-        return array(
-          'status' => API_SUCCESS, 
-          'message' => 'Success',
-          'exist' => $result->num_rows() > 0 ? 1 : 0
-        );
+		return $result->num_rows() > 0 ? 1 : 0;
+        // return array(
+        //   'status' => API_SUCCESS, 
+        //   'message' => 'Success',
+        //   'exist' => $result->num_rows() > 0 ? 1 : 0
+        // );
     }
 
     /* 모임 리스트 */
@@ -99,7 +99,15 @@ class Group extends CI_Model {
         if($result->num_rows()) {
         	foreach( $result->result() as $row )
 	        {
-		        array_push($data, $row);
+	        	$temp = array(
+	        		'idx' => $row->idx,
+	        		'name' => $row->name,
+	        		'master_idx' => $row->master_idx,
+	        		'price' => $row->price,
+	        		'photo_url' => $row->photo_url,
+	        		'exist' => $this->exist_community($row->idx)
+	        	);
+		        array_push($data, $temp);
 	        }	 
 
 	        return array(
