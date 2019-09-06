@@ -19,8 +19,10 @@ class Group extends CI_Model {
 	        );
 	    } else {
 			$photo_url = $this->file_upload($argu['photo']);
-
+			$acount_number = $this->acount_number();
 			$this->db->set('name', $argu['name']);
+
+			$this->db->set('acount_number', $acount_number);
 			$this->db->set('pw', $argu['pw']);
 			$this->db->set('master_idx', $argu['user_idx']);
 			$this->db->set('photo_url', $photo_url);
@@ -34,6 +36,20 @@ class Group extends CI_Model {
 				'message' => 'Success'
 			);
 		}	
+   	}
+
+   	public function acount_number() {
+   		$first = "1000";
+   		$second = "12";
+   		$third = (string)mt_rand(1, 999999);
+   		if(strlen($third) < 6) {
+   			$temp = "";
+   			for($i = 0; $i < 6-strlen($third); $i++) {
+   				$temp = $temp."0";
+   			}
+   			$third = $temp.$third;
+   		}
+   		return $first."-".$second."-".$third;
    	}
 
    	/* 파일 업로드 */
@@ -93,7 +109,7 @@ class Group extends CI_Model {
 
     /* 모임 리스트 */
     public function list_search($argu) {
-    	$query = "select idx, name, master_idx, price, photo_url from groups where idx in (select groups_idx from user_groups where user_idx=".$argu['user_idx'].")";
+    	$query = "select idx, name, master_idx, price, photo_url, acount_number from groups where idx in (select groups_idx from user_groups where user_idx=".$argu['user_idx'].")";
 
     	$result = $this->db->query($query);
 
@@ -107,6 +123,7 @@ class Group extends CI_Model {
 	        		'master_idx' => (int)$row->master_idx,
 	        		'price' => $row->price,
 	        		'photo_url' => $row->photo_url,
+	        		'acount_number' => $row->acount_number,
 	        		'exist' => $this->exist_community($row->idx)
 	        	);
 		        array_push($data, $temp);

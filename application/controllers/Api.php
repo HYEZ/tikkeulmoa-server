@@ -70,7 +70,6 @@ class Api extends CI_Controller {
 	/* 모임생성(통장개설) API */
 	public function p_group() {
 		$this->error_log("[/api/p_group] ENTER");
-
 		$this->load->model('Group');
 		$result = $this->Group->insert(array(
 			'user_idx' => $_POST['user_idx'],
