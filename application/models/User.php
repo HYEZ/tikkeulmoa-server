@@ -18,7 +18,7 @@ class User extends CI_Model {
           'data' => null
         );
       } else {
-        $this->error_log("모델 입성");
+        $this->error_log("[models/User/login] ENTER");
 
         $this->error_log($argu['id']);
         $this->error_log($argu['pw']);
@@ -29,17 +29,13 @@ class User extends CI_Model {
         $this->db->from("user");
         $result = $this->db->get();
         
-        // $data = '';
         $data = null;
-
-        // $this->error_log("모델 입성");
 
         if( $result->num_rows()) {
           foreach( $result->result() as $row )
           {
             $data = $row->idx;
           }
-          // $data = null;
         
           return array(
             'status' => API_SUCCESS, 
