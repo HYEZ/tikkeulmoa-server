@@ -34,7 +34,7 @@ class User extends CI_Model {
         if( $result->num_rows()) {
           foreach( $result->result() as $row )
           {
-            $data = $row->idx;
+            $data = (int)$row->idx;
           }
         
           return array(
@@ -74,6 +74,7 @@ class User extends CI_Model {
         
         if($result->num_rows()) {
           $res = $result->result()[0];
+          $res->idx = (int)$res->idx;
           return array(
             'status' => API_SUCCESS, 
             'message' => '로그인 성공',
@@ -110,34 +111,5 @@ class User extends CI_Model {
       }
       fputs($filep, "{$now} : {$msg}\n\r");
       fclose($filep);
-    }
-
-    /* Main 화면 */
-    public function main($argu) {
-      $this->db->where('idx', $argu['user_idx']);
-      $this->db->select("*");
-      $this->db->from("user");
-      $result = $this->db->get();
-      $data = [];
-      foreach( $result->result() as $row)
-      {
-        $temp = array(
-          'name' => $row->name,
-          'risk' => $this->risk()
-        );
-        array_push($data, $temp);
-        
-        return array(
-          'status' => API_SUCCESS, 
-          'message' => 'Success',
-          'data' => $data
-        );
-      }
-
-      return array(
-          'status' => 400, 
-          'message' => 'Fail',
-          'data' => $data
-        );
     }
 }

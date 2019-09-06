@@ -62,6 +62,8 @@ class Group extends CI_Model {
         $result = $this->db->get();
         if($result->num_rows()) {
           $res = $result->result()[0];
+          $res->idx = (int)$res->idx;
+          $res->master_idx = (int)$res->master_idx;
           return array(
             'status' => API_SUCCESS, 
             'message' => 'Success',
@@ -100,9 +102,9 @@ class Group extends CI_Model {
         	foreach( $result->result() as $row )
 	        {
 	        	$temp = array(
-	        		'idx' => $row->idx,
+	        		'idx' => (int)$row->idx,
 	        		'name' => $row->name,
-	        		'master_idx' => $row->master_idx,
+	        		'master_idx' => (int)$row->master_idx,
 	        		'price' => $row->price,
 	        		'photo_url' => $row->photo_url,
 	        		'exist' => $this->exist_community($row->idx)

@@ -75,6 +75,10 @@ class Community extends CI_Model {
       if($result->num_rows()) {
         foreach( $result->result() as $row )
         {
+          $row->idx = (int)$row->idx;
+          $row->is_notice = (int)$row->is_notice;
+          $row->user_idx = (int)$row->user_idx;
+          $row->community_idx = (int)$row->community_idx;
           array_push($data, $row);
         }  
 

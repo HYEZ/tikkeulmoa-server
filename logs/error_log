@@ -826,4 +826,35 @@
 2019/9/6 15:56:36 : [/api/groups] ENTER
 2019/9/6 15:57:35 : [/api/groups] ENTER
 2019/9/6 15:57:35 : [/api/groups] EXIT
+2019/9/6 16:2:47 : [/api/groups] ENTER
+2019/9/6 16:3:22 : [/api/groups] ENTER
+2019/9/6 16:3:22 : [/api/groups] EXIT
+2019/9/6 16:5:5 : [/api/details] ENTER
+2019/9/6 16:6:1 : [/api/details] ENTER
+2019/9/6 16:6:1 : [/api/details] EXIT
+2019/9/6 16:6:9 : [/api/details] ENTER
+2019/9/6 16:6:9 : [/api/details] EXIT
+2019/9/6 16:7:5 : [/api/details] ENTER
+2019/9/6 16:7:5 : [/api/details] EXIT
+2019/9/6 16:8:1 : [/api/details] ENTER
+2019/9/6 16:8:1 : [/api/details] EXIT
+2019/9/6 16:8:16 : [/api/details] ENTER
+2019/9/6 16:8:16 : [/api/details] EXIT
+2019/9/6 16:8:27 : [/api/details] ENTER
+2019/9/6 16:8:27 : [/api/details] EXIT
+2019/9/6 16:10:37 : [/api/user] ENTER
+2019/9/6 16:10:37 : [models/User/get] ENTER
+2019/9/6 16:10:46 : [/api/user] ENTER
+2019/9/6 16:10:46 : [models/User/get] ENTER
+2019/9/6 16:11:2 : [/api/user] ENTER
+2019/9/6 16:11:2 : [models/User/get] ENTER
+2019/9/6 16:11:2 : [/api/user] EXIT
+2019/9/6 16:11:49 : [/api/group] ENTER
+2019/9/6 16:11:49 : [/api/g_group] ENTER
+2019/9/6 16:11:49 : [models/Group/get] ENTER
+2019/9/6 16:11:49 : [/api/g_group] EXIT
+2019/9/6 16:12:58 : [/api/boards] ENTER
+2019/9/6 16:12:58 : [/api/boards] EXIT
+2019/9/6 16:13:14 : [/api/boards] ENTER
+2019/9/6 16:13:14 : [/api/boards] EXIT
 

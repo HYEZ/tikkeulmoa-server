@@ -66,7 +66,18 @@ class Detail extends CI_Model {
         if($result->num_rows()) {
           foreach( $result->result() as $row )
           {
-            array_push($data, $row);
+
+            $temp = array(
+              'idx' => (int)$row->idx,
+              'user_idx' => (int)$row->user_idx,
+              'groups_idx' => (int)$row->groups_idx,
+              'price' => $row->price,
+              'balance' => $row->balance,
+              'is_in' => $row->is_in,
+              'memo' => $row->memo,
+              'date' => $row->date
+            );
+            array_push($data, $temp);
           }  
 
           return array(
