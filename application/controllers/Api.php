@@ -44,6 +44,20 @@ class Api extends CI_Controller {
 		echo json_encode($result);
 	}
 
+	/* 회원정보 API */
+	public function user() {
+		$this->error_log("[/api/user] ENTER");
+
+		$this->load->model('User');
+		$result = $this->User->get(array(
+			'user_idx' => $_GET['user_idx']
+		));
+		
+		$this->error_log("[/api/user] EXIT");
+
+		echo json_encode($result);
+	}
+
 	/* 측정하기 API */
 	public function measure() {
 

@@ -53,6 +53,35 @@ class User extends CI_Model {
       }
     }
 
+    public function get($argu) {
+      $this->error_log("[models/User/user] ENTER");
+      if(empty($argu['user_idx'])) {
+        return array(
+          'status' => API_FAILURE, 
+          'message' => 'Fail',
+          'data' => null
+        );
+      } else {
+        $this->db->where('idx', $argu['user_idx']);
+        $this->db->select("idx, id, name, photo_url");
+        $this->db->from("user");
+        $result = $this->db->get();
+        if($result->num_rows()) {
+          $res = $result->result()[0];
+          return array(
+            'status' => API_SUCCESS, 
+            'message' => '로그인 성공',
+            'idx' => $res
+          );
+        }
+        return array(
+          'status' => API_FAILURE, 
+          'message' => 'Fail',
+          'data' => null
+        );
+      }
+    }
+
      /* User Join */
     public function insert($argu) {
 

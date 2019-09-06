@@ -320,4 +320,185 @@
 2019/9/3 9:52:7 : 6
 2019/9/3 9:52:7 : [models/Measure/insert] EXIT
 2019/9/3 9:52:7 : [/api/measure] EXIT
+2019/9/6 3:23:2 : [/api/login] ENTER
+2019/9/6 3:23:2 : 
+2019/9/6 3:23:2 : 
+2019/9/6 4:23:52 : [/api/login] ENTER
+2019/9/6 4:23:52 : 
+2019/9/6 4:23:52 : 
+2019/9/6 4:27:28 : [/api/login] ENTER
+2019/9/6 4:27:28 : test
+2019/9/6 4:27:28 : test
+2019/9/6 4:29:14 : [/api/login] ENTER
+2019/9/6 4:29:14 : 
+2019/9/6 4:29:14 : 
+2019/9/6 4:31:25 : [/api/login] ENTER
+2019/9/6 4:31:25 : 
+2019/9/6 4:31:25 : 
+2019/9/6 4:31:26 : [/api/login] ENTER
+2019/9/6 4:31:26 : 
+2019/9/6 4:31:26 : 
+2019/9/6 4:31:27 : [/api/login] ENTER
+2019/9/6 4:31:27 : 
+2019/9/6 4:31:27 : 
+2019/9/6 4:32:54 : [/api/login] ENTER
+2019/9/6 4:32:54 : 
+2019/9/6 4:32:54 : 
+2019/9/6 4:32:55 : [/api/login] ENTER
+2019/9/6 4:32:55 : 
+2019/9/6 4:32:55 : 
+2019/9/6 4:32:55 : [/api/login] ENTER
+2019/9/6 4:32:55 : 
+2019/9/6 4:32:55 : 
+2019/9/6 4:32:55 : [/api/login] ENTER
+2019/9/6 4:32:55 : 
+2019/9/6 4:32:55 : 
+2019/9/6 4:34:19 : [/api/login] ENTER
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : [/api/login] ENTER
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : [/api/login] ENTER
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : [/api/login] ENTER
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:19 : 
+2019/9/6 4:34:37 : [/api/login] ENTER
+2019/9/6 4:34:37 : 
+2019/9/6 4:34:37 : 
+2019/9/6 4:34:37 : [/api/login] ENTER
+2019/9/6 4:34:37 : 
+2019/9/6 4:34:37 : 
+2019/9/6 4:34:37 : [/api/login] ENTER
+2019/9/6 4:34:37 : 
+2019/9/6 4:34:37 : 
+2019/9/6 4:34:39 : [/api/login] ENTER
+2019/9/6 4:34:39 : 
+2019/9/6 4:34:39 : 
+2019/9/6 4:36:36 : [/api/login] ENTER
+2019/9/6 4:36:36 : 
+2019/9/6 4:36:36 : 
+2019/9/6 4:38:8 : [/api/login] ENTER
+2019/9/6 4:38:8 : 
+2019/9/6 4:38:8 : 
+2019/9/6 4:38:9 : [/api/login] ENTER
+2019/9/6 4:38:9 : 
+2019/9/6 4:38:9 : 
+2019/9/6 4:38:9 : [/api/login] ENTER
+2019/9/6 4:38:9 : 
+2019/9/6 4:38:9 : 
+2019/9/6 4:39:39 : [/api/login] ENTER
+2019/9/6 4:39:39 : 
+2019/9/6 4:39:39 : 
+2019/9/6 4:39:39 : [/api/login] EXIT
+2019/9/6 4:40:53 : [/api/login] ENTER
+2019/9/6 4:40:53 : test
+2019/9/6 4:40:53 : test
+2019/9/6 4:40:53 : [models/User/login] ENTER
+2019/9/6 4:40:53 : test
+2019/9/6 4:40:53 : 098f6bcd4621d373cade4e832627b4f6
+2019/9/6 4:40:53 : [/api/login] EXIT
+2019/9/6 4:40:59 : [/api/login] ENTER
+2019/9/6 4:40:59 : test
+2019/9/6 4:40:59 : test
+2019/9/6 4:40:59 : [models/User/login] ENTER
+2019/9/6 4:40:59 : test
+2019/9/6 4:40:59 : 098f6bcd4621d373cade4e832627b4f6
+2019/9/6 4:40:59 : [/api/login] EXIT
+2019/9/6 4:41:6 : [/api/login] ENTER
+2019/9/6 4:41:6 : 
+2019/9/6 4:41:6 : 
+2019/9/6 4:41:6 : [/api/login] EXIT
+2019/9/6 4:41:7 : [/api/login] ENTER
+2019/9/6 4:41:7 : 
+2019/9/6 4:41:7 : 
+2019/9/6 4:41:7 : [/api/login] EXIT
+2019/9/6 4:41:15 : [/api/login] ENTER
+2019/9/6 4:41:15 : 
+2019/9/6 4:41:15 : 
+2019/9/6 4:41:15 : [/api/login] EXIT
+2019/9/6 4:41:16 : [/api/login] ENTER
+2019/9/6 4:41:16 : 
+2019/9/6 4:41:16 : 
+2019/9/6 4:41:16 : [/api/login] EXIT
+2019/9/6 4:41:31 : [/api/user] ENTER
+2019/9/6 4:41:33 : [/api/login] ENTER
+2019/9/6 4:41:33 : 
+2019/9/6 4:41:33 : 
+2019/9/6 4:41:33 : [/api/login] EXIT
+2019/9/6 4:41:34 : [/api/user] ENTER
+2019/9/6 4:43:8 : [/api/user] ENTER
+2019/9/6 4:43:8 : [models/User/user] ENTER
+2019/9/6 4:43:8 : [/api/user] EXIT
+2019/9/6 4:43:9 : [/api/user] ENTER
+2019/9/6 4:43:9 : [models/User/user] ENTER
+2019/9/6 4:43:9 : [/api/user] EXIT
+2019/9/6 4:43:22 : [/api/user] ENTER
+2019/9/6 4:43:22 : [models/User/user] ENTER
+2019/9/6 4:43:22 : [/api/user] EXIT
+2019/9/6 4:43:41 : [/api/user] ENTER
+2019/9/6 4:43:41 : [models/User/user] ENTER
+2019/9/6 4:43:41 : [/api/user] EXIT
+2019/9/6 4:43:49 : [/api/user] ENTER
+2019/9/6 4:43:49 : [models/User/user] ENTER
+2019/9/6 4:43:49 : [/api/user] EXIT
+2019/9/6 4:43:53 : [/api/user] ENTER
+2019/9/6 4:43:53 : [models/User/user] ENTER
+2019/9/6 4:43:53 : [/api/user] EXIT
+2019/9/6 4:44:22 : [/api/user] ENTER
+2019/9/6 4:44:22 : [models/User/user] ENTER
+2019/9/6 4:44:32 : [/api/user] ENTER
+2019/9/6 4:44:32 : [models/User/user] ENTER
+2019/9/6 4:45:0 : [/api/user] ENTER
+2019/9/6 4:45:0 : [models/User/user] ENTER
+2019/9/6 4:45:34 : [/api/user] ENTER
+2019/9/6 4:45:34 : [models/User/user] ENTER
+2019/9/6 4:45:56 : [/api/user] ENTER
+2019/9/6 4:45:56 : [models/User/user] ENTER
+2019/9/6 4:45:56 : [/api/user] EXIT
+2019/9/6 4:46:20 : [/api/user] ENTER
+2019/9/6 4:46:20 : [models/User/user] ENTER
+2019/9/6 4:46:20 : [/api/user] EXIT
+2019/9/6 4:46:45 : [/api/user] ENTER
+2019/9/6 4:46:45 : [models/User/user] ENTER
+2019/9/6 4:46:45 : [/api/user] EXIT
+2019/9/6 4:47:28 : [/api/user] ENTER
+2019/9/6 4:47:28 : [models/User/user] ENTER
+2019/9/6 4:47:28 : [/api/user] EXIT
+2019/9/6 4:47:38 : [/api/user] ENTER
+2019/9/6 4:47:38 : [models/User/user] ENTER
+2019/9/6 4:47:38 : [/api/user] EXIT
+2019/9/6 4:47:49 : [/api/user] ENTER
+2019/9/6 4:47:49 : [models/User/user] ENTER
+2019/9/6 4:47:49 : [/api/user] EXIT
+2019/9/6 4:47:56 : [/api/user] ENTER
+2019/9/6 4:47:56 : [models/User/user] ENTER
+2019/9/6 4:47:56 : [/api/user] EXIT
+2019/9/6 4:48:1 : [/api/user] ENTER
+2019/9/6 4:48:1 : [models/User/user] ENTER
+2019/9/6 4:48:1 : [/api/user] EXIT
+2019/9/6 4:48:14 : [/api/user] ENTER
+2019/9/6 4:48:21 : [/api/user] ENTER
+2019/9/6 4:48:21 : [models/User/user] ENTER
+2019/9/6 4:48:21 : [/api/user] EXIT
+2019/9/6 4:49:8 : [/api/user] ENTER
+2019/9/6 4:49:8 : [models/User/user] ENTER
+2019/9/6 4:49:8 : [/api/user] EXIT
+2019/9/6 4:49:32 : [/api/user] ENTER
+2019/9/6 4:49:32 : [models/User/user] ENTER
+2019/9/6 4:49:32 : [/api/user] EXIT
+2019/9/6 4:51:5 : [/api/user] ENTER
+2019/9/6 4:51:5 : [models/User/user] ENTER
+2019/9/6 4:51:5 : [/api/user] EXIT
+2019/9/6 4:51:7 : [/api/user] ENTER
+2019/9/6 4:51:7 : [models/User/user] ENTER
+2019/9/6 4:51:7 : [/api/user] EXIT
+2019/9/6 4:51:18 : [/api/user] ENTER
+2019/9/6 4:51:18 : [models/User/user] ENTER
+2019/9/6 4:51:18 : [/api/user] EXIT
+2019/9/6 4:51:21 : [/api/user] ENTER
+2019/9/6 4:51:21 : [models/User/user] ENTER
+2019/9/6 4:51:21 : [/api/user] EXIT
 
