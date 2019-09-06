@@ -62,7 +62,7 @@ class Api extends CI_Controller {
 		$this->error_log("[/api/group] ENTER");
 		if(isset($_POST['user_idx'])) {
 			$this->p_group();
-		} else if(isset($_GET['user_idx'])) {
+		} else if(isset($_GET['groups_idx'])) {
 			$this->g_group();
 		}
 	}

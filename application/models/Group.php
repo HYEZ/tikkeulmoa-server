@@ -46,7 +46,37 @@ class Group extends CI_Model {
    	}
 
 
-    /* 측정 리스트 */
+   	/* 모임 정보 */
+   	public function get($argu) {
+      $this->error_log("[models/Group/get] ENTER");
+      if(empty($argu['groups_idx'])) {
+        return array(
+          'status' => API_FAILURE, 
+          'message' => 'Fail',
+          'data' => null
+        );
+      } else {
+        $this->db->where('idx', $argu['groups_idx']);
+        $this->db->select("idx, name, master_idx, price, photo_url");
+        $this->db->from("groups");
+        $result = $this->db->get();
+        if($result->num_rows()) {
+          $res = $result->result()[0];
+          return array(
+            'status' => API_SUCCESS, 
+            'message' => 'Success',
+            'data' => $res
+          );
+        }
+        return array(
+          'status' => API_FAILURE, 
+          'message' => 'Fail',
+          'data' => null
+        );
+      }
+    }
+
+    /* 모임 리스트 */
     public function list_search($argu) {
     	$this->db->where('user_idx', $argu['user_idx']);
         $this->db->select("*");

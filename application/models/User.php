@@ -54,7 +54,7 @@ class User extends CI_Model {
     }
 
     public function get($argu) {
-      $this->error_log("[models/User/user] ENTER");
+      $this->error_log("[models/User/get] ENTER");
       if(empty($argu['user_idx'])) {
         return array(
           'status' => API_FAILURE, 
@@ -66,12 +66,13 @@ class User extends CI_Model {
         $this->db->select("idx, id, name, photo_url");
         $this->db->from("user");
         $result = $this->db->get();
+        
         if($result->num_rows()) {
           $res = $result->result()[0];
           return array(
             'status' => API_SUCCESS, 
             'message' => '로그인 성공',
-            'idx' => $res
+            'data' => $res
           );
         }
         return array(

@@ -610,4 +610,17 @@
 2019/9/6 7:33:3 : [models/Group/insert] ENTER
 2019/9/6 7:33:3 : [models/Group/insert] EXIT
 2019/9/6 7:33:3 : [/api/p_group] EXIT
+2019/9/6 7:36:59 : [/api/group] ENTER
+2019/9/6 7:37:44 : [/api/group] ENTER
+2019/9/6 7:37:56 : [/api/group] ENTER
+2019/9/6 7:38:11 : [/api/group] ENTER
+2019/9/6 7:38:13 : [/api/group] ENTER
+2019/9/6 7:38:19 : [/api/group] ENTER
+2019/9/6 7:38:19 : [/api/g_group] ENTER
+2019/9/6 7:38:19 : [models/Group/get] ENTER
+2019/9/6 7:38:19 : [/api/g_group] EXIT
+2019/9/6 7:38:26 : [/api/group] ENTER
+2019/9/6 7:38:26 : [/api/g_group] ENTER
+2019/9/6 7:38:26 : [models/Group/get] ENTER
+2019/9/6 7:38:26 : [/api/g_group] EXIT
 
