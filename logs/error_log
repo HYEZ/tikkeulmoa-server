@@ -770,4 +770,17 @@
 2019/9/6 9:19:44 : [/api/withdraw] ENTER
 2019/9/6 9:19:44 : [models/Detail/insert] ENTER
 2019/9/6 9:19:44 : [/api/withdraw] EXIT
+2019/9/6 9:30:19 : [/api/board] ENTER
+2019/9/6 9:30:19 : [models/Community/insert_board] ENTER
+2019/9/6 9:30:19 : [/api/board] EXIT
+2019/9/6 9:30:45 : [/api/board] ENTER
+2019/9/6 9:30:45 : [models/Community/insert_board] ENTER
+2019/9/6 9:30:58 : [/api/board] ENTER
+2019/9/6 9:30:58 : [models/Community/insert_board] ENTER
+2019/9/6 9:31:2 : [/api/board] ENTER
+2019/9/6 9:31:2 : [models/Community/insert_board] ENTER
+2019/9/6 9:31:2 : [/api/board] EXIT
+2019/9/6 9:31:20 : [/api/board] ENTER
+2019/9/6 9:31:20 : [models/Community/insert_board] ENTER
+2019/9/6 9:31:20 : [/api/board] EXIT
 

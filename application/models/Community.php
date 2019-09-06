@@ -41,6 +41,30 @@ class Community extends CI_Model {
       return $result->num_rows();
     }
 
+    /* 커뮤니티 생성 */
+    public function insert_board($argu) {   
+      $this->error_log("[models/Community/insert_board] ENTER");  
+      if(empty($argu['user_idx']) || empty($argu['community_idx']) || empty($argu['content'])) {
+        return array(
+          'status' => API_FAILURE, 
+          'message' => 'Fail'
+        );
+      } else {
+        $this->db->set('is_notice', $argu['is_notice']);
+        $this->db->set('user_idx', $argu['user_idx']);
+        $this->db->set('community_idx', $argu['community_idx']);
+        $this->db->set('content', $argu['content']);
+        $this->db->set('date', date("Y-m-d H:i:s"));
+        $this->db->insert("boards");
+
+        return array(
+          'status' => API_SUCCESS, 
+          'message' => 'Success'
+        );
+        
+      } 
+    }
+
     /* 로그 */
     public function error_log($msg)
     {
