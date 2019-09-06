@@ -165,6 +165,44 @@ class Api extends CI_Controller {
 		echo json_encode($result);
 	}
 
+	/* 입출금 내역조회 API */
+	public function details() {
+		$this->error_log("[/api/details] ENTER");
+
+		$this->load->model('Detail');
+		$result = $this->Detail->list_search(array(
+			'groups_idx' => $_GET['groups_idx']
+		));
+		$this->error_log("[/api/details] EXIT");
+		echo json_encode($result);
+	}
+
+	/* 커뮤니티 생성 API */
+	public function community() {
+		$this->error_log("[/api/community] ENTER");
+		$_POST = json_decode(file_get_contents('php://input'), true);
+
+		$this->load->model('Community');
+		$result = $this->Community->insert(array(
+			'groups_idx' => $_POST['groups_idx']
+		));
+		$this->error_log("[/api/community] EXIT");
+		echo json_encode($result);
+	}
+
+	/* 글쓰기 API */
+	public function board() {
+		$this->error_log("[/api/community] ENTER");
+		$_POST = json_decode(file_get_contents('php://input'), true);
+		
+		$this->load->model('Community');
+		$result = $this->Community->insert(array(
+			'groups_idx' => $_POST['groups_idx']
+		));
+		$this->error_log("[/api/community] EXIT");
+		echo json_encode($result);
+	}
+
 	/* 로그 */
 	public function error_log($msg)
     {

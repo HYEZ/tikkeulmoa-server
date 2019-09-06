@@ -18,14 +18,17 @@ class Detail extends CI_Model {
 	          'message' => 'Fail'
 	        );
 	    } else {
+        $result = $this->db->query("select price from groups where idx=".$argu['groups_idx']);
+        $data = $result->result();
+        $price = $data[0]->price;
         if($argu['is_in'] == 1) {  
+          $balance = $price + $argu['price'];
           // 입금
           $this->db->query("update groups set price=price+".$argu['price']." where idx=".$argu['groups_idx']);
         } else { 
           // 출금
-          $result = $this->db->query("select price from groups where idx=".$argu['groups_idx']);
-          $data = $result->result();
-          if($data[0]->price - $argu['price'] > 0) {
+          $balance = $price - $argu['price'];
+          if($balance > 0) {
             $this->db->query("update groups set price=price-".$argu['price']." where idx=".$argu['groups_idx']);
           } else {
             return array(
@@ -37,6 +40,7 @@ class Detail extends CI_Model {
 
         $this->db->set('user_idx', $argu['user_idx']);
         $this->db->set('groups_idx', $argu['groups_idx']);
+        $this->db->set('balance', $balance);
         $this->db->set('price', $argu['price']);
         $this->db->set('memo', $argu['memo']);
         $this->db->set('is_in', $argu['is_in']);
@@ -52,6 +56,32 @@ class Detail extends CI_Model {
   		}	
    	}
 
+    /* 입출금 내역 리스트 */
+    public function list_search($argu) {
+      $query = "select * from details where groups_idx=".$argu['groups_idx'];
+
+      $result = $this->db->query($query);
+
+        $data = [];
+        if($result->num_rows()) {
+          foreach( $result->result() as $row )
+          {
+            array_push($data, $row);
+          }  
+
+          return array(
+            'status' => API_SUCCESS, 
+            'message' => 'Success',
+            'data' => $data
+          );
+        } else {
+          return array(
+            'status' => API_FAILURE, 
+            'message' => 'Fail',
+            'data' => null
+          );
+        }
+    }
 
     /* 로그 */
     public function error_log($msg)

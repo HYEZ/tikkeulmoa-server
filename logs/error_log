@@ -709,4 +709,65 @@
 2019/9/6 8:53:32 : [models/Detail/insert] ENTER
 2019/9/6 8:53:32 : [models/Detail/insert] EXIT
 2019/9/6 8:53:32 : [/api/deposit] EXIT
+2019/9/6 8:57:0 : [/api/details] ENTER
+2019/9/6 8:57:29 : [/api/details] ENTER
+2019/9/6 8:57:46 : [/api/details] ENTER
+2019/9/6 8:57:46 : [/api/details] EXIT
+2019/9/6 9:5:26 : [/api/community] ENTER
+2019/9/6 9:6:8 : [/api/community] ENTER
+2019/9/6 9:6:8 : [models/Community/insert] ENTER
+2019/9/6 9:6:8 : [models/Community/insert] EXIT
+2019/9/6 9:6:8 : [/api/community] EXIT
+2019/9/6 9:10:45 : [/api/community] ENTER
+2019/9/6 9:10:45 : [models/Community/insert] ENTER
+2019/9/6 9:10:45 : [models/Community/insert] EXIT
+2019/9/6 9:10:45 : [/api/community] EXIT
+2019/9/6 9:11:55 : [/api/community] ENTER
+2019/9/6 9:11:55 : [models/Community/insert] ENTER
+2019/9/6 9:11:55 : [/api/community] EXIT
+2019/9/6 9:12:0 : [/api/community] ENTER
+2019/9/6 9:12:0 : [models/Community/insert] ENTER
+2019/9/6 9:12:0 : [/api/community] EXIT
+2019/9/6 9:12:2 : [/api/community] ENTER
+2019/9/6 9:12:2 : [models/Community/insert] ENTER
+2019/9/6 9:12:2 : [/api/community] EXIT
+2019/9/6 9:12:3 : [/api/community] ENTER
+2019/9/6 9:12:3 : [models/Community/insert] ENTER
+2019/9/6 9:12:3 : [/api/community] EXIT
+2019/9/6 9:12:18 : [/api/community] ENTER
+2019/9/6 9:12:18 : [models/Community/insert] ENTER
+2019/9/6 9:12:18 : [/api/community] EXIT
+2019/9/6 9:12:48 : [/api/community] ENTER
+2019/9/6 9:12:48 : [models/Community/insert] ENTER
+2019/9/6 9:12:48 : [/api/community] EXIT
+2019/9/6 9:13:1 : [/api/community] ENTER
+2019/9/6 9:13:1 : [models/Community/insert] ENTER
+2019/9/6 9:13:1 : [/api/community] EXIT
+2019/9/6 9:14:8 : [/api/community] ENTER
+2019/9/6 9:14:8 : [models/Community/insert] ENTER
+2019/9/6 9:14:8 : [/api/community] EXIT
+2019/9/6 9:14:11 : [/api/community] ENTER
+2019/9/6 9:14:11 : [models/Community/insert] ENTER
+2019/9/6 9:14:11 : [/api/community] EXIT
+2019/9/6 9:14:21 : [/api/community] ENTER
+2019/9/6 9:14:21 : [models/Community/insert] ENTER
+2019/9/6 9:14:21 : [/api/community] EXIT
+2019/9/6 9:14:27 : [/api/community] ENTER
+2019/9/6 9:14:27 : [models/Community/insert] ENTER
+2019/9/6 9:14:27 : [/api/community] EXIT
+2019/9/6 9:19:5 : [/api/deposit] ENTER
+2019/9/6 9:19:5 : [models/Detail/insert] ENTER
+2019/9/6 9:19:5 : [models/Detail/insert] EXIT
+2019/9/6 9:19:5 : [/api/deposit] EXIT
+2019/9/6 9:19:25 : [/api/deposit] ENTER
+2019/9/6 9:19:25 : [models/Detail/insert] ENTER
+2019/9/6 9:19:25 : [models/Detail/insert] EXIT
+2019/9/6 9:19:25 : [/api/deposit] EXIT
+2019/9/6 9:19:34 : [/api/withdraw] ENTER
+2019/9/6 9:19:34 : [models/Detail/insert] ENTER
+2019/9/6 9:19:34 : [models/Detail/insert] EXIT
+2019/9/6 9:19:34 : [/api/withdraw] EXIT
+2019/9/6 9:19:44 : [/api/withdraw] ENTER
+2019/9/6 9:19:44 : [models/Detail/insert] ENTER
+2019/9/6 9:19:44 : [/api/withdraw] EXIT
 
