@@ -129,6 +129,19 @@ class Api extends CI_Controller {
 		echo json_encode($result);
 	}
 
+	/* 커뮤니티 유무 */
+	public function exist_community() {
+		$this->error_log("[/api/exist_community] ENTER");
+
+		$this->load->model('Group');
+		$result = $this->Group->exist_community(array(
+			'groups_idx' => $_GET['groups_idx']
+		));
+		$this->error_log("[/api/exist_community] EXIT");
+		echo json_encode($result);
+	}
+
+
 	/* 입금 API */
 	public function deposit() {
 		$this->error_log("[/api/deposit] ENTER");
