@@ -682,4 +682,31 @@
 2019/9/6 8:19:57 : [models/User/get] ENTER
 2019/9/6 8:19:57 : [models/Group/insert] ENTER
 2019/9/6 8:19:57 : [/api/member] EXIT
+2019/9/6 8:47:58 : [/api/deposit] ENTER
+2019/9/6 8:47:58 : [models/Detail/insert] ENTER
+2019/9/6 8:47:58 : [models/Detail/insert] EXIT
+2019/9/6 8:47:58 : [/api/deposit] EXIT
+2019/9/6 8:48:22 : [/api/withdraw] ENTER
+2019/9/6 8:48:22 : [models/Detail/insert] ENTER
+2019/9/6 8:48:22 : [models/Detail/insert] EXIT
+2019/9/6 8:48:22 : [/api/withdraw] EXIT
+2019/9/6 8:51:4 : [/api/withdraw] ENTER
+2019/9/6 8:51:4 : [models/Detail/insert] ENTER
+2019/9/6 8:51:4 : [models/Detail/insert] EXIT
+2019/9/6 8:51:4 : [/api/withdraw] EXIT
+2019/9/6 8:51:15 : [/api/withdraw] ENTER
+2019/9/6 8:51:15 : [models/Detail/insert] ENTER
+2019/9/6 8:51:15 : [models/Detail/insert] EXIT
+2019/9/6 8:51:15 : [/api/withdraw] EXIT
+2019/9/6 8:52:27 : [/api/withdraw] ENTER
+2019/9/6 8:52:27 : [models/Detail/insert] ENTER
+2019/9/6 8:52:27 : [models/Detail/insert] EXIT
+2019/9/6 8:52:27 : [/api/withdraw] EXIT
+2019/9/6 8:52:37 : [/api/withdraw] ENTER
+2019/9/6 8:52:37 : [models/Detail/insert] ENTER
+2019/9/6 8:52:37 : [/api/withdraw] EXIT
+2019/9/6 8:53:32 : [/api/deposit] ENTER
+2019/9/6 8:53:32 : [models/Detail/insert] ENTER
+2019/9/6 8:53:32 : [models/Detail/insert] EXIT
+2019/9/6 8:53:32 : [/api/deposit] EXIT
 

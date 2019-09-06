@@ -128,7 +128,43 @@ class Api extends CI_Controller {
 		$this->error_log("[/api/member] EXIT");
 		echo json_encode($result);
 	}
+
+	/* 입금 API */
+	public function deposit() {
+		$this->error_log("[/api/deposit] ENTER");
+		$_POST = json_decode(file_get_contents('php://input'), true);
+
+		$this->load->model('Detail');
+		$result = $this->Detail->insert(array(
+			'user_idx' => $_POST['user_idx'],
+			'groups_idx' => $_POST['groups_idx'],
+			'price' => $_POST['price'],
+			'memo' => $_POST['memo'],
+			'is_in' => 1,
+		));
+		
+		$this->error_log("[/api/deposit] EXIT");
+		echo json_encode($result);
+	}
 	
+	/* 출금 API */
+	public function withdraw() {
+		$this->error_log("[/api/withdraw] ENTER");
+		$_POST = json_decode(file_get_contents('php://input'), true);
+
+		$this->load->model('Detail');
+		$result = $this->Detail->insert(array(
+			'user_idx' => $_POST['user_idx'],
+			'groups_idx' => $_POST['groups_idx'],
+			'price' => $_POST['price'],
+			'memo' => $_POST['memo'],
+			'is_in' => 0,
+		));
+		
+		$this->error_log("[/api/withdraw] EXIT");
+		echo json_encode($result);
+	}
+
 	/* 로그 */
 	public function error_log($msg)
     {
