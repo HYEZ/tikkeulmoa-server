@@ -1293,4 +1293,14 @@
 2019/9/6 17:56:23 : [models/Group/insert] ENTER
 2019/9/6 17:56:23 : [models/Group/insert] EXIT
 2019/9/6 17:56:23 : [/api/p_group] EXIT
+2019/9/6 17:58:58 : [/api/deposit] ENTER
+2019/9/6 17:58:58 : [models/Detail/insert] ENTER
+2019/9/6 17:58:58 : [models/Detail/insert] EXIT
+2019/9/6 17:58:58 : [/api/deposit] EXIT
+2019/9/6 18:10:38 : [/api/group] ENTER
+2019/9/6 18:10:38 : [/api/p_group] ENTER
+2019/9/6 18:10:38 : [models/Group/insert] ENTER
+2019/9/6 18:10:38 : [models/Group/insert] ENTER
+2019/9/6 18:10:38 : [models/Group/insert] EXIT
+2019/9/6 18:10:38 : [/api/p_group] EXIT
 

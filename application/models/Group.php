@@ -18,14 +18,14 @@ class Group extends CI_Model {
 	          'message' => 'Fail'
 	        );
 	    } else {
-			$photo_url = $this->file_upload($argu['photo']);
+			// $photo_url = $this->file_upload($argu['photo']);
 			$acount_number = $this->acount_number();
 			$this->db->set('name', $argu['name']);
 
 			$this->db->set('acount_number', $acount_number);
 			$this->db->set('pw', $argu['pw']);
 			$this->db->set('master_idx', $argu['user_idx']);
-			$this->db->set('photo_url', $photo_url);
+			// $this->db->set('photo_url', $photo_url);
 			$this->db->set('date', date("Y-m-d H:i:s"));
 			$this->db->insert("groups");
 			

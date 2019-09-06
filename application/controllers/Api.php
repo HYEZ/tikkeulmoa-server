@@ -59,6 +59,7 @@ class Api extends CI_Controller {
 	}
 
 	public function group() {
+		$_POST = json_decode(file_get_contents('php://input'), true);
 		$this->error_log("[/api/group] ENTER");
 		if(isset($_POST['user_idx'])) {
 			$this->p_group();
@@ -69,13 +70,14 @@ class Api extends CI_Controller {
 
 	/* 모임생성(통장개설) API */
 	public function p_group() {
+		$_POST = json_decode(file_get_contents('php://input'), true);
+
 		$this->error_log("[/api/p_group] ENTER");
 		$this->load->model('Group');
 		$result = $this->Group->insert(array(
 			'user_idx' => $_POST['user_idx'],
 			'name' => $_POST['name'],
-			'pw' => md5($_POST['pw']),
-			'photo' => $_FILES['photo']
+			'pw' => md5($_POST['pw'])
 		));
 		$this->error_log("[/api/p_group] EXIT");
 		echo json_encode($result);
