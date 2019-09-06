@@ -636,4 +636,50 @@
 2019/9/6 7:52:33 : [/api/groups] EXIT
 2019/9/6 7:53:7 : [/api/groups] ENTER
 2019/9/6 7:53:7 : [/api/groups] EXIT
+2019/9/6 8:13:52 : [/api/member] ENTER
+2019/9/6 8:14:26 : [/api/member] ENTER
+2019/9/6 8:14:26 : [models/User/get] ENTER
+2019/9/6 8:14:26 : [/api/member] EXIT
+2019/9/6 8:14:37 : [/api/member] ENTER
+2019/9/6 8:14:37 : [models/User/get] ENTER
+2019/9/6 8:14:37 : [/api/member] EXIT
+2019/9/6 8:15:19 : [/api/member] ENTER
+2019/9/6 8:15:19 : [models/User/get] ENTER
+2019/9/6 8:15:19 : [/api/member] EXIT
+2019/9/6 8:15:33 : [/api/member] ENTER
+2019/9/6 8:15:33 : [models/User/get] ENTER
+2019/9/6 8:15:33 : [/api/member] EXIT
+2019/9/6 8:15:50 : [/api/member] ENTER
+2019/9/6 8:15:50 : [models/User/get] ENTER
+2019/9/6 8:15:50 : [/api/member] EXIT
+2019/9/6 8:16:32 : [/api/member] ENTER
+2019/9/6 8:16:32 : [models/User/get] ENTER
+2019/9/6 8:16:32 : [/api/member] EXIT
+2019/9/6 8:16:35 : [/api/member] ENTER
+2019/9/6 8:16:35 : [models/User/get] ENTER
+2019/9/6 8:16:35 : [/api/member] EXIT
+2019/9/6 8:16:59 : [/api/member] ENTER
+2019/9/6 8:16:59 : [models/User/get] ENTER
+2019/9/6 8:16:59 : [/api/member] EXIT
+2019/9/6 8:17:11 : [/api/member] ENTER
+2019/9/6 8:17:11 : [models/User/get] ENTER
+2019/9/6 8:17:11 : [/api/member] EXIT
+2019/9/6 8:17:19 : [/api/member] ENTER
+2019/9/6 8:17:19 : [models/User/get] ENTER
+2019/9/6 8:17:19 : [/api/member] EXIT
+2019/9/6 8:18:7 : [/api/member] ENTER
+2019/9/6 8:18:7 : [models/User/get] ENTER
+2019/9/6 8:18:15 : [/api/member] ENTER
+2019/9/6 8:18:15 : [models/User/get] ENTER
+2019/9/6 8:18:15 : [/api/member] EXIT
+2019/9/6 8:18:31 : [/api/member] ENTER
+2019/9/6 8:18:31 : [models/User/get] ENTER
+2019/9/6 8:18:31 : [/api/member] EXIT
+2019/9/6 8:18:38 : [/api/member] ENTER
+2019/9/6 8:18:38 : [models/User/get] ENTER
+2019/9/6 8:18:38 : [/api/member] EXIT
+2019/9/6 8:19:57 : [/api/member] ENTER
+2019/9/6 8:19:57 : [models/User/get] ENTER
+2019/9/6 8:19:57 : [models/Group/insert] ENTER
+2019/9/6 8:19:57 : [/api/member] EXIT
 

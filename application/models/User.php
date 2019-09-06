@@ -55,14 +55,19 @@ class User extends CI_Model {
 
     public function get($argu) {
       $this->error_log("[models/User/get] ENTER");
-      if(empty($argu['user_idx'])) {
+      if(empty($argu['user_idx']) && empty($argu['id'])) {
         return array(
           'status' => API_FAILURE, 
           'message' => 'Fail',
           'data' => null
         );
       } else {
-        $this->db->where('idx', $argu['user_idx']);
+        if(isset($argu['user_idx'])) {
+          $this->db->where('idx', $argu['user_idx']);
+        } else {
+          $this->db->where('id', $argu['id']);
+        }
+        
         $this->db->select("idx, id, name, photo_url");
         $this->db->from("user");
         $result = $this->db->get();
@@ -76,52 +81,10 @@ class User extends CI_Model {
           );
         }
         return array(
-          'status' => API_FAILURE, 
-          'message' => 'Fail',
+          'status' => 433, 
+          'message' => '존재하지 않는 사용자입니다.',
           'data' => null
         );
-      }
-    }
-
-     /* User Join */
-    public function insert($argu) {
-
-      $this->error_log("모델 입성");
-      if(empty($argu['id']) || empty($argu['pw']) || empty($argu['name']) || empty($argu['birth'])) {
-        return array(
-          'status' => API_FAILURE, 
-          'message' => '회원가입 실패'        
-        );
-      } else {
-
-        $this->error_log("드루왕");
-        if(!$this->check_id($argu)) {
-          $this->error_log($argu['id']);
-
-          $this->db->set('id', $argu['id']);
-          $this->db->set('pw', $argu['pw']);
-          $this->db->set('name', $argu['name']);
-          $this->db->set('gender', $argu['gender']);
-          $this->db->set('birth', $argu['birth']);
-          $this->db->insert("user");
-          // $result = $this->db->get();
-
-
-          $this->error_log("test");
-        
-          // $idx = $this->db->insert_id();
-
-          return array(
-            'status' => API_SUCCESS, 
-            'message' => '로그인 성공'
-          );
-        } else {
-          return array(
-            'status' => API_INDEX_ERROR, 
-            'message' => '이미 존재하는 ID입니다'        
-          );
-        }
-        
       }
     }
     
@@ -177,10 +140,4 @@ class User extends CI_Model {
           'data' => $data
         );
     }
-
-    /* 빈혈 위험도 계산 */
-    public function risk() {
-      return 1;
-    }
-
 }

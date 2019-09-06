@@ -111,11 +111,20 @@ class Api extends CI_Controller {
 		$this->error_log("[/api/member] ENTER");
 		$_POST = json_decode(file_get_contents('php://input'), true);
 
-		$this->load->model('Group');
-		$result = $this->Group->insert_member(array(
-			'id' => $_POST['id'],
-			'groups_idx' => $_POST['groups_idx'],
+
+		$this->load->model('User');
+		$result = $this->User->get(array(
+			'id' => $_POST['id']
 		));
+
+		if($result['status'] == API_SUCCESS) {
+			$this->load->model('Group');
+			$result = $this->Group->insert_member(array(
+				'user_idx' => $result['data']->idx,
+				'groups_idx' => $_POST['groups_idx'],
+			));
+		}
+		
 		$this->error_log("[/api/member] EXIT");
 		echo json_encode($result);
 	}

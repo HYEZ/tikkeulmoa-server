@@ -103,6 +103,25 @@ class Group extends CI_Model {
         }
     }
 
+    /* 모임원 추가 */
+    public function insert_member($argu) {
+    	$this->error_log("[models/Group/insert] ENTER");	
+   		if(empty($argu['user_idx']) || empty($argu['groups_idx'])) {
+	        return array(
+	          'status' => API_FAILURE, 
+	          'message' => 'Fail'
+	        );
+	    } else {
+			$this->db->set('user_idx', $argu['user_idx']);
+			$this->db->set('groups_idx', $argu['groups_idx']);
+			$this->db->insert("user_groups");
+			
+			return array(
+				'status' => API_SUCCESS, 
+				'message' => 'Success'
+			);
+		}	
+    }
 
     /* 로그 */
     public function error_log($msg)
