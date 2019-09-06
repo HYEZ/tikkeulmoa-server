@@ -74,8 +74,9 @@ class Api extends CI_Controller {
 		$this->load->model('Group');
 		$result = $this->Group->insert(array(
 			'user_idx' => $_POST['user_idx'],
-			'period' => $_POST['period'],
-			'video' => $_FILES['video']
+			'name' => $_POST['name'],
+			'pw' => md5($_POST['pw']),
+			'photo' => $_FILES['photo']
 		));
 		$this->error_log("[/api/p_group] EXIT");
 		echo json_encode($result);

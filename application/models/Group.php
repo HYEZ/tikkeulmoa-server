@@ -9,75 +9,40 @@ class Group extends CI_Model {
         $this->load->database();
    	}
 
-   	/* 측정하기 */
-   	public function insert($argu) {
-   		error_reporting(0);
-   		if(0) {
+   	/* 모임생성(통장개설) */
+   	public function insert($argu) {   
+   		$this->error_log("[models/Group/insert] ENTER");	
+   		if(empty($argu['user_idx']) || empty($argu['pw']) || empty($argu['name'])) {
+	        return array(
+	          'status' => API_FAILURE, 
+	          'message' => 'Fail'
+	        );
+	    } else {
+			$photo_url = $this->file_upload($argu['photo']);
 
-			return array(
-				'status' => API_FAILURE, 
-				'message' => 'Fail',
-				'data' => null
-			);
-   		} else {
-   			$this->error_log("[models/Measure/insert] ENTER");
-
-   			$weather = $this->get_weather();
-   			// file upload
-   			$file = $argu['video'];
-   			$uploadDir = $_SERVER['DOCUMENT_ROOT'].'/upload/video';
-   			$tmp_name = $file["tmp_name"];
-			$name = date("YmdHis").'_'.$file["name"];
-			move_uploaded_file($tmp_name , "$uploadDir/$name");
-
-
-   			$this->db->set('period', $argu['period']);
-
-
-			$this->error_log("1");
-
-			$this->db->set('hb', 0);
-			$this->error_log("1");
-
-			$this->db->set('user_idx', $argu['user_idx']);
-			$this->error_log("2");
-
-			$this->db->set('date', date("y/m/d"));
-			$this->error_log("3");
-
-			$this->db->set('temperature', $weather['temp']);
-			$this->error_log("4");
-
-			$this->db->set('humidity', $weather['reh']);
-			$this->error_log("5");
-
-
-			$this->error_log('period:'.$argu['period']);
-			$this->error_log('user_idx:'.$argu['user_idx']);
-			$this->error_log('user_idx:'. $weather['temp']);
-			$this->error_log('user_idx:'.$weather['reh']);
-
-
-			$this->db->insert("measure");
-
-			$this->error_log("6");
-
-
-
-
-			$this->error_log("[models/Measure/insert] EXIT");
-
-			$data = array(
-				'hb' => 0,
-				'date' => date("y/m/d")
-			);
+			$this->db->set('name', $argu['name']);
+			$this->db->set('pw', $argu['pw']);
+			$this->db->set('master_idx', $argu['user_idx']);
+			$this->db->set('photo_url', $photo_url);
+			$this->db->set('date', date("Y-m-d H:i:s"));
+			$this->db->insert("groups");
+			
+			$this->error_log("[models/Group/insert] EXIT");
 
 			return array(
 				'status' => API_SUCCESS, 
-				'message' => 'Success',
-				'data' => $data
+				'message' => 'Success'
 			);
-   		}
+		}	
+   	}
+
+   	/* 파일 업로드 */
+   	public function file_upload($file) {
+   		$uploadDir = $_SERVER['DOCUMENT_ROOT'].'/upload/photo';
+		$tmp_name = $file["tmp_name"];
+		$name = date("YmdHis").'_'.$file["name"];
+		move_uploaded_file($tmp_name , "$uploadDir/$name");
+		return "/upload/photo/".$name;
    	}
 
 
@@ -116,46 +81,6 @@ class Group extends CI_Model {
         
     }
 
-    /* 측정하기 버튼 클릭 */
-    public function flag($argu) {
-      $this->error_log("[models/Measure/flag] ENTER");
-      if(empty($argu['user_idx'])) {
-        return array(
-			'status' => API_FAILURE, 
-			'message' => 'Fail'        
-        );
-      } else {
-        
-		$this->error_log($argu['user_idx']);
-		$this->error_log($argu['flag']);
-
-		if(!$this->check_flag($argu)) {
-			$this->db->set('user_idx', $argu['user_idx']);
-			$this->db->set('flag', $argu['flag']);
-			$this->db->insert("measure_flag");
-		} else {
-			$this->db->set('flag', $argu['flag']);
-			$this->db->where('user_idx', $argu['user_idx']);
-			$this->db->update("measure_flag");
-		}
-
-		return array(
-			'status' => API_SUCCESS, 
-			'message' => 'SUCCESS'
-		);
-        
-        
-      }
-    }
-
-    /* 측정한 경험이 있는지 */
-    private function check_flag($argu) {
-		$this->db->where('user_idx', $argu['user_idx']);
-		$this->db->select("*");
-		$this->db->from("measure_flag");
-		$result = $this->db->get();
-		return $result->num_rows();
-    }
 
     /* 로그 */
     public function error_log($msg)
