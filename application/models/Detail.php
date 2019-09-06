@@ -58,7 +58,7 @@ class Detail extends CI_Model {
 
     /* 입출금 내역 리스트 */
     public function list_search($argu) {
-      $query = "select * from details where groups_idx=".$argu['groups_idx'];
+      $query = "select details.*, user.name from details, user where user.idx=details.user_idx and groups_idx=".$argu['groups_idx'];
 
       $result = $this->db->query($query);
 
@@ -66,7 +66,6 @@ class Detail extends CI_Model {
         if($result->num_rows()) {
           foreach( $result->result() as $row )
           {
-
             $temp = array(
               'idx' => (int)$row->idx,
               'user_idx' => (int)$row->user_idx,
@@ -75,7 +74,8 @@ class Detail extends CI_Model {
               'balance' => $row->balance,
               'is_in' => $row->is_in,
               'memo' => $row->memo,
-              'date' => $row->date
+              'date' => $row->date,
+              'name' => $row->name
             );
             array_push($data, $temp);
           }  

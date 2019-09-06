@@ -1212,4 +1212,17 @@
 2019/9/6 17:4:1 : [models/Group/insert] ENTER
 2019/9/6 17:4:1 : [models/Group/insert] EXIT
 2019/9/6 17:4:1 : [/api/p_group] EXIT
+2019/9/6 17:10:7 : [/api/details] ENTER
+2019/9/6 17:10:40 : [/api/details] ENTER
+2019/9/6 17:10:40 : [/api/details] EXIT
+2019/9/6 17:10:55 : [/api/details] ENTER
+2019/9/6 17:10:55 : [/api/details] EXIT
+2019/9/6 17:11:5 : [/api/details] ENTER
+2019/9/6 17:11:5 : [/api/details] EXIT
+2019/9/6 17:11:56 : [/api/details] ENTER
+2019/9/6 17:11:56 : [/api/details] EXIT
+2019/9/6 17:12:43 : [/api/details] ENTER
+2019/9/6 17:12:43 : [/api/details] EXIT
+2019/9/6 17:13:0 : [/api/details] ENTER
+2019/9/6 17:13:0 : [/api/details] EXIT
 
