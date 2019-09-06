@@ -105,6 +105,20 @@ class Api extends CI_Controller {
 		$this->error_log("[/api/groups] EXIT");
 		echo json_encode($result);
 	}
+
+	/* 모임원 추가 API */
+	public function member() {
+		$this->error_log("[/api/member] ENTER");
+		$_POST = json_decode(file_get_contents('php://input'), true);
+
+		$this->load->model('Group');
+		$result = $this->Group->insert_member(array(
+			'id' => $_POST['id'],
+			'groups_idx' => $_POST['groups_idx'],
+		));
+		$this->error_log("[/api/member] EXIT");
+		echo json_encode($result);
+	}
 	
 	/* 로그 */
 	public function error_log($msg)
