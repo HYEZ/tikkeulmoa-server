@@ -76,6 +76,7 @@ class Api extends CI_Controller {
 		echo json_encode($result);
 	}
 
+	
 	/* 로그 */
 	public function error_log($msg)
     {
