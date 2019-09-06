@@ -783,4 +783,7 @@
 2019/9/6 9:31:20 : [/api/board] ENTER
 2019/9/6 9:31:20 : [models/Community/insert_board] ENTER
 2019/9/6 9:31:20 : [/api/board] EXIT
+2019/9/6 9:33:22 : [/api/boards] ENTER
+2019/9/6 9:33:56 : [/api/boards] ENTER
+2019/9/6 9:33:56 : [/api/boards] EXIT
 

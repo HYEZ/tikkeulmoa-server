@@ -206,6 +206,19 @@ class Api extends CI_Controller {
 		echo json_encode($result);
 	}
 
+	/* 글목록 API */
+	public function boards() {
+		$this->error_log("[/api/boards] ENTER");
+
+		$this->load->model('Community');
+		$result = $this->Community->list_search(array(
+			'community_idx' => $_GET['community_idx']
+		));
+		$this->error_log("[/api/boards] EXIT");
+		echo json_encode($result);
+	}
+
+
 	/* 로그 */
 	public function error_log($msg)
     {

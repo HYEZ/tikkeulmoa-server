@@ -65,6 +65,33 @@ class Community extends CI_Model {
       } 
     }
 
+    /* 글목록 */
+    public function list_search($argu) {
+      $query = "select * from boards where community_idx=".$argu['community_idx'];
+
+      $result = $this->db->query($query);
+
+      $data = [];
+      if($result->num_rows()) {
+        foreach( $result->result() as $row )
+        {
+          array_push($data, $row);
+        }  
+
+        return array(
+          'status' => API_SUCCESS, 
+          'message' => 'Success',
+          'data' => $data
+        );
+      } else {
+        return array(
+          'status' => API_FAILURE, 
+          'message' => 'Fail',
+          'data' => null
+        );
+      }
+    }
+
     /* 로그 */
     public function error_log($msg)
     {
