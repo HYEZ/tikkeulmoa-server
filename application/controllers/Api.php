@@ -58,38 +58,52 @@ class Api extends CI_Controller {
 		echo json_encode($result);
 	}
 
-	/* 측정하기 API */
-	public function measure() {
+	public function group() {
+		$this->error_log("[/api/group] ENTER");
+		if(isset($_POST['user_idx'])) {
+			$this->p_group();
+		} else if(isset($_GET['user_idx'])) {
+			$this->g_group();
+		}
+	}
 
-		$this->error_log("[/api/measure] ENTER");
-		// $_POST = json_decode(file_get_contents('php://input'), FILE_USE_INCLUDE_PATH);
+	/* 모임생성(통장개설) API */
+	public function p_group() {
+		$this->error_log("[/api/p_group] ENTER");
 
-		$this->load->model('Measure');
-		$result = $this->Measure->insert(array(
+		$this->load->model('Group');
+		$result = $this->Group->insert(array(
 			'user_idx' => $_POST['user_idx'],
 			'period' => $_POST['period'],
 			'video' => $_FILES['video']
 		));
-		
-		$this->error_log("[/api/measure] EXIT");
-
+		$this->error_log("[/api/p_group] EXIT");
 		echo json_encode($result);
 	}
 
-	/* 측정리스트 API */
-	public function measures() {
-		$this->error_log("[/api/measures] ENTER");
+	/* 모임 정보 API */
+	public function g_group() {
+		$this->error_log("[/api/g_group] ENTER");
 
-		$this->load->model('Measure');
-		$result = $this->Measure->list_search(array(
+		$this->load->model('Group');
+		$result = $this->Group->get(array(
+			'groups_idx' => $_GET['groups_idx']
+		));
+		$this->error_log("[/api/g_group] EXIT");
+		echo json_encode($result);
+	}
+
+	/* 모임 리스트 API */
+	public function groups() {
+		$this->error_log("[/api/groups] ENTER");
+
+		$this->load->model('Group');
+		$result = $this->Group->list_search(array(
 			'user_idx' => $_GET['user_idx']
 		));
-		
-		$this->error_log("[/api/measures] EXIT");
-
+		$this->error_log("[/api/groups] EXIT");
 		echo json_encode($result);
 	}
-
 	
 	/* 로그 */
 	public function error_log($msg)
@@ -106,35 +120,5 @@ class Api extends CI_Controller {
 		fputs($filep, "{$now} : {$msg}\n\r");
 		fclose($filep);
     }
-
-    /* 측정하기 버튼 클릭 */
-    public function measure_flag() {
-    	$this->error_log("[/api/measure_flag] ENTER");
-		$_POST = json_decode(file_get_contents('php://input'), true);
-
-		$this->load->model('Measure');
-
-		$result = $this->Measure->flag(array(
-			'user_idx' => $_POST['user_idx'],
-			'flag' => $_POST['flag']
-		));
-
-		$this->error_log("[/api/measure_flag] EXIT");
-		echo json_encode($result);
-    }
-
-    /* 메인화면 API */
-	public function main() {
-		$this->error_log("[/api/main] ENTER");
-
-		$this->load->model('User');
-		$result = $this->User->main(array(
-			'user_idx' => $_GET['user_idx']
-		));
-		
-		$this->error_log("[/api/main] EXIT");
-
-		echo json_encode($result);
-	}
 
 }

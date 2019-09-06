@@ -501,4 +501,30 @@
 2019/9/6 4:51:21 : [/api/user] ENTER
 2019/9/6 4:51:21 : [models/User/user] ENTER
 2019/9/6 4:51:21 : [/api/user] EXIT
+2019/9/6 4:55:45 : [/api/user] ENTER
+2019/9/6 4:55:45 : [models/User/user] ENTER
+2019/9/6 4:55:45 : [/api/user] EXIT
+2019/9/6 6:56:54 : [/api/group] ENTER
+2019/9/6 6:56:54 : [models/Measure/insert] ENTER
+2019/9/6 6:57:2 : [/api/group] ENTER
+2019/9/6 6:57:2 : [models/Measure/insert] ENTER
+2019/9/6 6:57:8 : [/api/group] ENTER
+2019/9/6 6:57:8 : [models/Measure/insert] ENTER
+2019/9/6 6:57:13 : [/api/group] ENTER
+2019/9/6 6:57:13 : [models/Measure/insert] ENTER
+2019/9/6 6:58:41 : [/api/group] ENTER
+2019/9/6 6:58:41 : [models/Measure/insert] ENTER
+2019/9/6 6:59:13 : [/api/group] ENTER
+2019/9/6 6:59:13 : [models/Measure/insert] ENTER
+2019/9/6 6:59:27 : [/api/group] ENTER
+2019/9/6 6:59:33 : [/api/group] ENTER
+2019/9/6 6:59:40 : [/api/group] ENTER
+2019/9/6 6:59:49 : [/api/group] ENTER
+2019/9/6 7:0:17 : [/api/group] ENTER
+2019/9/6 7:2:31 : [/api/group] ENTER
+2019/9/6 7:2:36 : [/api/group] ENTER
+2019/9/6 7:2:45 : [/api/group] ENTER
+2019/9/6 7:2:47 : [/api/group] ENTER
+2019/9/6 7:2:57 : [/api/group] ENTER
+2019/9/6 7:3:8 : [/api/group] ENTER
 
