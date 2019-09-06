@@ -192,14 +192,17 @@ class Api extends CI_Controller {
 
 	/* 글쓰기 API */
 	public function board() {
-		$this->error_log("[/api/community] ENTER");
+		$this->error_log("[/api/board] ENTER");
 		$_POST = json_decode(file_get_contents('php://input'), true);
 		
 		$this->load->model('Community');
-		$result = $this->Community->insert(array(
-			'groups_idx' => $_POST['groups_idx']
+		$result = $this->Community->insert_board(array(
+			'is_notice' => $_POST['is_notice'],
+			'user_idx' => $_POST['user_idx'],
+			'community_idx' => $_POST['community_idx'],
+			'content' => $_POST['content']
 		));
-		$this->error_log("[/api/community] EXIT");
+		$this->error_log("[/api/board] EXIT");
 		echo json_encode($result);
 	}
 
