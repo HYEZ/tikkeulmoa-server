@@ -44,7 +44,7 @@ class Detail extends CI_Model {
         $this->db->set('price', $argu['price']);
         $this->db->set('memo', $argu['memo']);
         $this->db->set('is_in', $argu['is_in']);
-        $this->db->set('date', date("Y-m-d H:i:s"));
+        $this->db->set('date', date("y.m.d"));
         $this->db->insert("details");
   			
   			$this->error_log("[models/Detail/insert] EXIT");

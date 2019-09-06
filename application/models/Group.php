@@ -76,6 +76,19 @@ class Group extends CI_Model {
       }
     }
 
+    /* 커뮤니티 유무 */
+   	public function exist_community($argu) {
+		$query = "select * from community where groups_idx=".$argu['groups_idx']."";
+
+		$result = $this->db->query($query);
+
+        return array(
+          'status' => API_SUCCESS, 
+          'message' => 'Success',
+          'exist' => $result->num_rows() > 0 ? 1 : 0
+        );
+    }
+
     /* 모임 리스트 */
     public function list_search($argu) {
     	$query = "select idx, name, master_idx, price, photo_url from groups where idx in (select groups_idx from user_groups where user_idx=".$argu['user_idx'].")";
