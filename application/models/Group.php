@@ -29,6 +29,13 @@ class Group extends CI_Model {
 			$this->db->set('date', date("Y-m-d H:i:s"));
 			$this->db->insert("groups");
 			
+			$temp = array(
+				'groups_idx' => $this->db->insert_id(),
+				'user_idx' => $argu['user_idx'],
+				'is_master' => 1
+			);
+			$this->insert_member($temp);
+
 			$this->error_log("[models/Group/insert] EXIT");
 
 			return array(
@@ -154,6 +161,7 @@ class Group extends CI_Model {
 	    } else {
 			$this->db->set('user_idx', $argu['user_idx']);
 			$this->db->set('groups_idx', $argu['groups_idx']);
+			$this->db->set('is_master', $argu['is_master']);
 			$this->db->insert("user_groups");
 			
 			return array(

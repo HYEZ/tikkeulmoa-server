@@ -121,6 +121,7 @@ class Api extends CI_Controller {
 			$result = $this->Group->insert_member(array(
 				'user_idx' => $result['data']->idx,
 				'groups_idx' => $_POST['groups_idx'],
+				'is_master' => 0
 			));
 		}
 		

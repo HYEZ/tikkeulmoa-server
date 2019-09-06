@@ -1225,4 +1225,72 @@
 2019/9/6 17:12:43 : [/api/details] EXIT
 2019/9/6 17:13:0 : [/api/details] ENTER
 2019/9/6 17:13:0 : [/api/details] EXIT
+2019/9/6 17:39:8 : [/api/withdraw] ENTER
+2019/9/6 17:39:8 : [models/Detail/insert] ENTER
+2019/9/6 17:39:8 : [models/Detail/insert] EXIT
+2019/9/6 17:39:8 : [/api/withdraw] EXIT
+2019/9/6 17:47:43 : [/api/member] ENTER
+2019/9/6 17:47:43 : [models/User/get] ENTER
+2019/9/6 17:47:43 : [/api/member] EXIT
+2019/9/6 17:48:3 : [/api/member] ENTER
+2019/9/6 17:48:3 : [models/User/get] ENTER
+2019/9/6 17:48:3 : [models/Group/insert] ENTER
+2019/9/6 17:49:23 : [/api/member] ENTER
+2019/9/6 17:49:23 : [models/User/get] ENTER
+2019/9/6 17:49:23 : [models/Group/insert] ENTER
+2019/9/6 17:49:23 : [/api/member] EXIT
+2019/9/6 17:51:38 : [/api/group] ENTER
+2019/9/6 17:51:56 : [/api/group] ENTER
+2019/9/6 17:52:21 : [/api/group] ENTER
+2019/9/6 17:52:50 : [/api/group] ENTER
+2019/9/6 17:52:50 : [/api/p_group] ENTER
+2019/9/6 17:52:50 : [models/Group/insert] ENTER
+2019/9/6 17:52:50 : [models/Group/insert] EXIT
+2019/9/6 17:52:50 : [/api/p_group] EXIT
+2019/9/6 17:52:55 : [/api/group] ENTER
+2019/9/6 17:52:55 : [/api/p_group] ENTER
+2019/9/6 17:52:55 : [models/Group/insert] ENTER
+2019/9/6 17:52:55 : [models/Group/insert] EXIT
+2019/9/6 17:52:55 : [/api/p_group] EXIT
+2019/9/6 17:53:10 : [/api/group] ENTER
+2019/9/6 17:53:10 : [/api/p_group] ENTER
+2019/9/6 17:53:10 : [models/Group/insert] ENTER
+2019/9/6 17:53:10 : [models/Group/insert] EXIT
+2019/9/6 17:53:10 : [/api/p_group] EXIT
+2019/9/6 17:54:16 : [/api/group] ENTER
+2019/9/6 17:54:16 : [/api/p_group] ENTER
+2019/9/6 17:54:16 : [models/Group/insert] ENTER
+2019/9/6 17:54:16 : [models/Group/insert] ENTER
+2019/9/6 17:54:16 : [models/Group/insert] EXIT
+2019/9/6 17:54:16 : [/api/p_group] EXIT
+2019/9/6 17:54:36 : [/api/group] ENTER
+2019/9/6 17:54:36 : [/api/p_group] ENTER
+2019/9/6 17:54:36 : [models/Group/insert] ENTER
+2019/9/6 17:54:36 : [models/Group/insert] ENTER
+2019/9/6 17:54:36 : [models/Group/insert] EXIT
+2019/9/6 17:54:36 : [/api/p_group] EXIT
+2019/9/6 17:54:37 : [/api/group] ENTER
+2019/9/6 17:54:37 : [/api/p_group] ENTER
+2019/9/6 17:54:37 : [models/Group/insert] ENTER
+2019/9/6 17:54:37 : [models/Group/insert] ENTER
+2019/9/6 17:54:37 : [models/Group/insert] EXIT
+2019/9/6 17:54:37 : [/api/p_group] EXIT
+2019/9/6 17:54:43 : [/api/group] ENTER
+2019/9/6 17:54:43 : [/api/p_group] ENTER
+2019/9/6 17:54:43 : [models/Group/insert] ENTER
+2019/9/6 17:54:43 : [models/Group/insert] ENTER
+2019/9/6 17:54:43 : [models/Group/insert] EXIT
+2019/9/6 17:54:43 : [/api/p_group] EXIT
+2019/9/6 17:55:2 : [/api/group] ENTER
+2019/9/6 17:55:2 : [/api/p_group] ENTER
+2019/9/6 17:55:2 : [models/Group/insert] ENTER
+2019/9/6 17:55:2 : [models/Group/insert] ENTER
+2019/9/6 17:55:2 : [models/Group/insert] EXIT
+2019/9/6 17:55:2 : [/api/p_group] EXIT
+2019/9/6 17:56:23 : [/api/group] ENTER
+2019/9/6 17:56:23 : [/api/p_group] ENTER
+2019/9/6 17:56:23 : [models/Group/insert] ENTER
+2019/9/6 17:56:23 : [models/Group/insert] ENTER
+2019/9/6 17:56:23 : [models/Group/insert] EXIT
+2019/9/6 17:56:23 : [/api/p_group] EXIT
 
